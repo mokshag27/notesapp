@@ -1,0 +1,12 @@
+<div class="div-container-fluid my-3">
+    <form action="" class="form-group" [formGroup]="loginForm">
+        <label for="">Username</label>
+        <br>
+        <input type="text" class="form-control" formControlName="user_name">
+
+        <label for="">Password</label>
+        <br>
+        <input type="text" class="form-control" formControlName="password">
+        <button (click)="login()">Login</button>
+    </form>
+</div>

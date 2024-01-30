@@ -1,0 +1,26 @@
+/* src/app/navbar/navbar.component.css */
+
+.navbar {
+    background-color: #3498db;
+    /* Primary color */
+}
+
+.navbar-brand {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.navbar-nav .nav-item .nav-link {
+    color: white;
+}
+
+.btn-success {
+    background-color: #2ecc71;
+    /* Success color */
+    border: none;
+}
+
+.btn-success:hover {
+    background-color: #27ae60;
+    /* Darker shade on hover */
+}

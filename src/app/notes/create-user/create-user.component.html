@@ -1,0 +1,16 @@
+<div class="div-container-fluid my-3">
+    <form action="" class="form-group" [formGroup]="createForm">
+        <label for="">Username</label>
+        <br>
+        <input type="text" class="form-control" formControlName="user_name">
+
+        <label for="">Password</label>
+        <br>
+        <input type="text" class="form-control" formControlName="password">
+
+        <label for="">Email</label>
+        <br>
+        <input type="text" class="form-control" formControlName="email">
+        <button (click)="submit()">Register</button>
+    </form>
+</div>        

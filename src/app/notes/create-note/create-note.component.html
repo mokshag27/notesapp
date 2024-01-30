@@ -1,0 +1,13 @@
+<div class="div-container-fluid my-3">
+    <form action="" class="form-group" [formGroup]="createForm">
+        <label for="">Title</label>
+        <br>
+        <input type="text" class="form-control" formControlName="title">
+
+        <label for="">Description</label>
+        <br>
+        <input type="text" class="form-control" formControlName="description">
+
+        <button (click)="create()">create</button>
+    </form>
+</div>

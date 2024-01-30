@@ -1,0 +1,36 @@
+<div class="note-categories">
+    <ul class="nav-list fs-3 m-3 border-bottom flex-row justify-content-between" (activeIdChange)="fetchNotes(user_id)">
+        <li>
+            <button navLink>ALL</button>
+            <ng-template navContent>
+                <div class="note-list" id="noteList">
+                    <div class="row align-items-center m-0">
+                        <i class="col-auto icon-arrow fa-solid fa-arrow-trend-up fa-2x"></i>
+                        <h3 class="col m-2">Notes</h3>
+                    </div>
+                    <div class="row justify-content-center m-2">
+                        <div class="note-box col-lg-4 col-10 border-end" *ngFor="let note of notesData">
+                            <div class="note-content d-flex flex-column mb-3">
+                                <div class="row m-0 p-2">
+                                    <h3 class="col-6 note-title">{{ note.title }}</h3>
+                                    <a class="col-6 text-end" [routerLink]="['/notes',note.user_id]">
+                                        <i class="fa-2x icon-arrow-square fa-solid fa-arrow-up-right-from-square"
+                                            style="color: #000000;"></i>
+                                    </a>
+                                </div>
+                                <div class="p-2">
+                                    <p class="note-description">{{ note.description }}</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <i class="fa-solid fa-portrait m-2"></i>
+                                <span class="col note-created-at">{{ note.created_at | date:"longDate" }}</span>
+                                <button class="btn btn-success col-3">Read More</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </ng-template>
+        </li>
+    </ul>
+</div>
